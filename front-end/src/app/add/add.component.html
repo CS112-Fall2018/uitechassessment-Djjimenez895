@@ -1,0 +1,94 @@
+<!--
+  <h1 align="center"> Add an Item </h1>
+  <body>
+  <table class="add-table" align="center" multiple>
+    <thead>
+      <tr>
+        <th scope="col">  </th>
+        <th scope="col">  </th>
+      </tr>
+    </thead>
+
+    <tbody name="item-name">
+      <tr>
+        <td> Name </td>
+        <td> <input type="text" name="item_name"> </td>
+        <br>
+        <br>
+      </tr>
+
+      <tr>
+          <td> Description </td>
+          <td> <input type="text" name="desc"> </td>
+          <br>
+          <br>
+      </tr>
+
+      <tr>
+          <td> Price </td>
+          <td> <input type="text" name="price"> </td>
+          <br>
+          <br>
+      </tr>
+
+      <tr>
+          <td> Amount </td>
+          <td> <input type="text" name="amount"> </td>
+          <br>
+          <br>
+      </tr>
+    </tbody>
+      <form name="item_info" ng-controller>
+          <div align="center">
+            <br>
+            <br>
+            <br>
+            <label> Name
+              <input type="text" name="item_name">
+            </label>
+
+            <br>
+            <br>
+
+            <label> Description
+              <input type="text" name="desc">
+            </label>
+
+            <br>
+            <br>
+
+            <label> Price
+                <input type="text" name="price">
+              </label>
+
+            <label> Amount
+                <input type="text" name="amount">
+            </label>
+          </div>
+      </form>
+  </table>
+
+  <div align="center">
+    <br>
+    <button class="submit"> Add </button>
+  </div>
+
+
+  </body>
+-->
+
+<body align="center">
+<label> Item Name </label>
+<input (input)="item_name=$event.target.value" type="text" class="form-control"> <br> <br>
+
+<label> Item Description </label>
+<input (input)="item_desc=$event.target.value" type="text" class="form-control"> <br> <br>
+
+<label> Item Price </label>
+<input (input)="item_price=$event.target.value" type="text" class="form-control"> <br> <br>
+
+<label> Item Quantity </label>
+<input (input)="item_quant=$event.target.value" type="text" class="form-control"> <br> <br>
+
+<button class="btn btn-success" (click)="submit()">Submit </button>
+</body>

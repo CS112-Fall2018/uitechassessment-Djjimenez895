@@ -7,8 +7,8 @@ import { Item } from './../cart';
   selector: 'app-cart',
  // templateUrl: './cart.component.html',
   template: `
-    <h2> Items </h2>
-    <ul>
+    <h2 align="center"> Items </h2>
+    <ul align="center">
       <li *ngFor="let item of items">
         {{item.name}}, {{item.description}}
       </li>
@@ -26,7 +26,7 @@ export class CartComponent implements OnInit {
     // Gets data we received from the subscribed variable
     // and then puts it into the items array
     this.cartService.getAllItems().subscribe(data => this.items = data);
-    //this.cartService.getItem("Laptop").subscribe(data => this)
+    // this.cartService.getItem("Laptop").subscribe(data => this)
+    // alert(this.items);
   }
-
 }
