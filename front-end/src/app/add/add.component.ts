@@ -36,5 +36,6 @@ export class AddComponent implements OnInit {
 
     this.product = new Product(this.item_name, this.item_desc, this.c_item_price, this.c_item_quant);
     this.cartService.insertItem(this.product).subscribe(data => this.product = data);
+    alert('Item was entered succesfully');
   }
 }
