@@ -10,7 +10,7 @@ import { Item } from './../cart';
     <h2 align="center"> Items </h2>
     <ul align="center">
       <li *ngFor="let item of items">
-        {{item.name}}, {{item.description}}
+        <label> Item Name: </label> {{item.name}}  <label> Item Description: </label> {{item.description}}
       </li>
     </ul>
   `,
